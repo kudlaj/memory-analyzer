@@ -5,7 +5,7 @@
 **Heapdump Analyzer Tool**
 
 ## Overview
-The Heapdump Analyzer Tool is a Node.js-based utility designed to parse `.heapsnapshot` files generated from V8 (Node.js) and extract meaningful memory usage data. The tool will identify object types consuming the most memory, track the growth of memory usage over time by comparing snapshots, and help detect potential memory leaks. This tool is primarily used by developers and SREs for debugging and performance tuning.
+The Heapdump Analyzer Tool is a Node.js-based (Typescript) utility designed to parse `.heapsnapshot` files generated from V8 (Node.js) and extract meaningful memory usage data. The tool will identify object types consuming the most memory, track the growth of memory usage over time by comparing snapshots, and help detect potential memory leaks. This tool is primarily used by developers and SREs for debugging and performance tuning.
 
 ## Goals
 - Automatically parse `.heapsnapshot` files stored in a `/dumps` folder.
