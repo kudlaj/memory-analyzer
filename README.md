@@ -98,11 +98,3 @@ MIT or internal company license
 
 ---
 
-_End of Document_
-"""
-
-# Save the markdown file
-output_path = Path("/mnt/data/heapdump-analyzer-spec.md")
-output_path.write_text(markdown_content)
-
-output_path.name

@@ -1,0 +1,22 @@
+{
+  "name": "memory-analyzer",
+  "version": "1.0.0",
+  "description": "**Heapdump Analyzer Tool**",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"No tests implemented\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@types/node": "^24.1.0",
+    "commander": "^14.0.0",
+    "heapsnapshot-parser": "^0.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
