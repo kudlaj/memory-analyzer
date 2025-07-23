@@ -13,18 +13,21 @@ export function writeAnalysis(result: AnalysisResult, outDir: string, baseName: 
   textLines.push(`Node Count: ${result.nodeCount}`);
   textLines.push('Top Nodes:');
   for (const n of result.topNodes) {
-    textLines.push(`  ${n.type} ${n.name} - ${formatBytes(n.self_size)}`);
+    const rs = n.retained_size ? ` (retained ${formatBytes(n.retained_size)})` : '';
+    textLines.push(`  ${n.type} ${n.name} - ${formatBytes(n.self_size)}${rs}`);
   }
   if (result.heavyClosures.length) {
     textLines.push('Heavy Closures:');
     for (const n of result.heavyClosures) {
-      textLines.push(`  ${n.name} - ${formatBytes(n.self_size)}`);
+      const rs = n.retained_size ? ` (retained ${formatBytes(n.retained_size)})` : '';
+      textLines.push(`  ${n.name} - ${formatBytes(n.self_size)}${rs}`);
     }
   }
   if (result.largeArrays.length) {
     textLines.push('Large Arrays/Buffers:');
     for (const n of result.largeArrays) {
-      textLines.push(`  ${n.type} ${n.name} - ${formatBytes(n.self_size)}`);
+      const rs = n.retained_size ? ` (retained ${formatBytes(n.retained_size)})` : '';
+      textLines.push(`  ${n.type} ${n.name} - ${formatBytes(n.self_size)}${rs}`);
     }
   }
 
