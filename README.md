@@ -85,7 +85,7 @@ heapdump-analyzer --compare dumps/heap-123.heapsnapshot dumps/heap-456.heapsnaps
 - Export to flamegraph-compatible format
 
 ## Notes
-- The tool does **not** compute `retainedSize` unless dominator tree traversal is implemented.
+- The tool computes `retainedSize` using a dominator tree traversal.
 - Will document the blocking nature of `v8.getHeapSnapshot()` for snapshot producers.
 
 ## Target Users
