@@ -3,6 +3,7 @@ import path from 'path';
 import { analyzeSnapshot } from './analyzer';
 import { compareSnapshots } from './comparer';
 import { writeAnalysis, writeComparison } from './reporter';
+import { startServer } from './server';
 
 program
   .name('heapdump-analyzer')
@@ -28,6 +29,15 @@ program
     const baseName = path.basename(newSnapshot, path.extname(newSnapshot)) + '-diff';
     writeComparison(comparison, path.join('output'), baseName);
     console.log('Comparison written for snapshots');
+  });
+
+program
+  .command('serve <analysisJson>')
+  .description('Serve web UI for an analysis JSON file')
+  .option('-p, --port <port>', 'Port to run the server on', '3000')
+  .action((analysisJson, options) => {
+    const port = parseInt(options.port, 10);
+    startServer(analysisJson, port);
   });
 
 program.parse();
