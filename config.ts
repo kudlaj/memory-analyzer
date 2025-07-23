@@ -1,0 +1,3 @@
+export const HEAVY_CLOSURE_THRESHOLD = 100 * 1024; // 100 KB
+export const LARGE_ARRAY_THRESHOLD = 50 * 1024; // 50 KB
+export const DEEP_CHAIN_DEPTH = 5;
