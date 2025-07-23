@@ -1,8 +1,5 @@
 
-# Markdown content from the specification
-markdown_content = """# Technical Specification Document
 
----
 
 ## Project Title
 **Heapdump Analyzer Tool**
